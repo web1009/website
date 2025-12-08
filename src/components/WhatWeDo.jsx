@@ -122,7 +122,7 @@ const WhatWeDo = () => {
                     7–8 month study begins.
                   </p>
                 </div>
-                <div className="whatwedo-cta-wrapper">
+                <div className="whatwedo-cta-wrapper whatwedo-cta-desktop">
                   <a 
                     href="https://docs.google.com/forms/d/e/1FAIpQLSdu7HpqIJaEagfRa0_DlEkpGw0oiIIjTNsUCgfLViNbsjJiyg/viewform"
                     target="_blank"
@@ -144,6 +144,16 @@ const WhatWeDo = () => {
                 }}
               />
               <i className="fas fa-graduation-cap" style={{ display: 'none' }}></i>
+            </div>
+            <div className="whatwedo-cta-wrapper whatwedo-cta-mobile">
+              <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdu7HpqIJaEagfRa0_DlEkpGw0oiIIjTNsUCgfLViNbsjJiyg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatwedo-cta-button" 
+              >
+                Learn More
+              </a>
             </div>
           </div>
         </div>

@@ -160,6 +160,10 @@
   margin-top: 30px;
 }
 
+.whatwedo-cta-mobile {
+  display: none;
+}
+
 .whatwedo-cta-button {
   display: inline-block;
   margin-top: 0;
@@ -298,29 +302,23 @@
     max-width: 100%;
   }
   
-  /* 모바일에서 버튼을 텍스트 컨텐츠 밖으로 빼서 이미지 아래에 배치 */
-  .whatwedo-content-block:nth-of-type(3) .whatwedo-text-content {
-    display: flex;
-    flex-direction: column;
+  /* 모바일에서 버튼을 이미지 아래에 배치 */
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-desktop {
+    display: none !important;
   }
   
-  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-wrapper {
-    order: 10 !important;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-mobile {
+    display: flex !important;
     justify-content: center;
-  }
-  
-  .whatwedo-content-block:nth-of-type(3) .whatwedo-image-content {
-    order: 2 !important;
+    margin-top: 30px;
+    width: 100%;
   }
   
   .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-button {
     width: 100%;
     max-width: 300px;
     text-align: center;
-    margin: 20px auto 0;
+    margin: 0 auto;
     display: block;
   }
 }
@@ -433,23 +431,17 @@
     box-sizing: border-box;
   }
 
-  /* 모바일에서 버튼을 텍스트 컨텐츠 밖으로 빼서 이미지 아래에 배치 */
-  .whatwedo-content-block:nth-of-type(3) .whatwedo-text-content {
-    display: flex;
-    flex-direction: column;
+  /* 모바일에서 버튼을 이미지 아래에 배치 */
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-desktop {
+    display: none !important;
   }
   
-  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-wrapper {
-    order: 10 !important;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: 0;
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-mobile {
+    display: flex !important;
     justify-content: center;
+    margin-top: 30px;
+    width: 100%;
     padding: 0 15px;
-  }
-  
-  .whatwedo-content-block:nth-of-type(3) .whatwedo-image-content {
-    order: 2 !important;
   }
   
   .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-button {
@@ -458,7 +450,7 @@
     width: 100%;
     max-width: 280px;
     display: block;
-    margin: 20px auto 0;
+    margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
   }
