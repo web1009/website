@@ -289,7 +289,7 @@
   justify-content: center;
   gap: 0;
   position: relative;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-top: 40px;
 }
 
@@ -650,6 +650,10 @@
   .gauge-label {
     font-size: 0.9rem;
   }
+  
+  .level-progress-container {
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 480px) {
@@ -710,5 +714,6 @@
   
   .level-progress-container {
     gap: 5px;
+    flex-wrap: wrap;
   }
 }
