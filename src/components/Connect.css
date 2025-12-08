@@ -316,5 +316,13 @@
     height: 40px;
     font-size: 1rem;
   }
+  
+  .connect-icon-large-wrapper {
+    margin-bottom: 15px;
+  }
+  
+  .connect-icon-brand {
+    font-size: 3rem;
+  }
 }
 

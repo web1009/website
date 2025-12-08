@@ -144,6 +144,15 @@
   .navbar-container {
     padding: 0 20px;
   }
+  
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  
+  .navbar-logo-icon {
+    width: 20px;
+    height: 20px;
+  }
 
   .navbar-toggler {
     display: block;
@@ -187,5 +196,15 @@
   .nav-link.active::after {
     display: none;
   }
+}
 
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 0.85rem;
+  }
+  
+  .navbar-logo-icon {
+    width: 18px;
+    height: 18px;
+  }
 }

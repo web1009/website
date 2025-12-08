@@ -122,14 +122,16 @@ const WhatWeDo = () => {
                     7–8 month study begins.
                   </p>
                 </div>
-                <a 
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdu7HpqIJaEagfRa0_DlEkpGw0oiIIjTNsUCgfLViNbsjJiyg/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-                  className="whatwedo-cta-button" 
-                >
-                  Learn More
-                </a>
+                <div className="whatwedo-cta-wrapper">
+                  <a 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdu7HpqIJaEagfRa0_DlEkpGw0oiIIjTNsUCgfLViNbsjJiyg/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatwedo-cta-button" 
+                  >
+                    Learn More
+                  </a>
+                </div>
               </div>
           <div className="whatwedo-image-content">
             <div className="whatwedo-circle-image">

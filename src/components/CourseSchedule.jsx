@@ -62,7 +62,7 @@ const CourseSchedule = () => {
     {
       step: 'STEP 1',
       title: 'Introductory Level',
-      description: 'Build a strong foundation in Bible study with fundamental teachings and basic concepts. Learn the essential principles that will guide your journey through Scripture.',
+      description: 'Build a strong foundation by studying how Jesus taught about the kingdom of heaven through figurative language. Learn the spiritual truths and principles contained in these teachings that will prepare you for deeper biblical study.',
       duration: '2-3 months',
       icon: 'fas fa-book-open',
       bgColor: '#283593'
@@ -70,7 +70,7 @@ const CourseSchedule = () => {
     {
       step: 'STEP 2',
       title: 'Intermediate Level',
-      description: 'Deepen your understanding with advanced biblical analysis and interpretation. Explore complex themes and develop critical thinking skills in studying God\'s Word.',
+      description: 'Deepen your understanding of God\'s 6,000-year redemptive plan through biblical history. Explore how Old Testament prophecies connect to their New Testament fulfillment and see the complete picture of Scripture.',
       duration: '2-3 months',
       icon: 'fas fa-graduation-cap',
       bgColor: '#e9ecef'
@@ -78,7 +78,7 @@ const CourseSchedule = () => {
     {
       step: 'STEP 3',
       title: 'Advanced Level',
-      description: 'Master comprehensive Bible study methods and theological insights. Apply your knowledge to real-life situations and become equipped to teach others.',
+      description: 'Master the book of Revelation through comprehensive study of all 22 chapters. Apply your accumulated knowledge to understand this prophetic text and become equipped to share these teachings with others.',
       duration: '2-3 months',
       icon: 'fas fa-lightbulb',
       bgColor: '#283593'

@@ -60,6 +60,7 @@
   border-radius: 0;
   position: relative;
   z-index: 2;
+  max-width: 100%;
 }
 
 .benefit-list-item {
@@ -98,6 +99,12 @@
   clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 50%, calc(100% - 40px) 100%, 0 100%);
   z-index: 4;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .benefit-list-item.active::after {
+    display: none;
+  }
 }
 
 .benefit-list-number {
@@ -549,6 +556,7 @@
 
   .benefits-detail {
     min-height: auto;
+    margin-left: 0;
   }
 
   .benefit-charts-container {
@@ -597,6 +605,7 @@
 
   .benefits-content-wrapper {
     gap: 25px;
+    padding: 15px;
   }
 
   .benefit-list-item {
@@ -622,6 +631,7 @@
 
   .benefits-detail {
     padding: 30px 20px;
+    margin-left: 0;
   }
 
   .benefit-detail-title {
@@ -648,7 +658,8 @@
   }
 
   .benefits-list {
-    padding: 20px 15px;
+    padding: 15px 10px;
+    flex: 0 0 100%;
   }
 
   .benefit-list-item {
@@ -658,6 +669,7 @@
 
   .benefits-detail {
     padding: 25px 15px;
+    margin-left: 0;
   }
 
   .benefit-gauge {
@@ -683,5 +695,20 @@
 
   .benefit-free-highlight {
     padding: 20px 0;
+  }
+  
+  .level-step-button {
+    white-space: normal;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    min-width: auto;
+  }
+  
+  .level-connector {
+    width: 20px;
+  }
+  
+  .level-progress-container {
+    gap: 5px;
   }
 }

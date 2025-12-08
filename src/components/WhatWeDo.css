@@ -3,14 +3,25 @@
   background-color: #ffffff;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.whatwedo-section .container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .whatwedo-content-block {
   display: flex;
   align-items: center;
-  gap: 80px;
-  margin-bottom: 100px;
+  gap: 50px;
+  margin-bottom: 60px;
   position: relative;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .whatwedo-content-block:nth-of-type(even) {
@@ -28,6 +39,7 @@
 .whatwedo-text-content {
   flex: 1;
   max-width: 50%;
+  padding-left: 30px;
 }
 
 .whatwedo-image-content {
@@ -41,6 +53,7 @@
 .whatwedo-circle-image {
   width: 500px;
   height: 500px;
+  max-width: 100%;
   border-radius: 0;
   background: #f0f0f0;
   display: flex;
@@ -81,6 +94,7 @@
 
 .whatwedo-block-text {
   text-align: left;
+  width: 100%;
 }
 
 .whatwedo-block-text p {
@@ -89,6 +103,8 @@
   color: #555;
   margin-bottom: 18px;
   font-family: 'Raleway', sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .whatwedo-options-grid {
@@ -138,9 +154,15 @@
   width: 20px;
 }
 
+.whatwedo-cta-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
 .whatwedo-cta-button {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 0;
   padding: 15px 40px;
   background: #283593;
   color: white;
@@ -183,28 +205,81 @@
 
   .whatwedo-content-block {
     flex-direction: column !important;
-    gap: 40px;
+    gap: 30px;
     margin-bottom: 60px;
+    align-items: stretch;
+    width: 100%;
+    display: flex;
   }
 
-  .whatwedo-text-content,
+  .whatwedo-content-block:nth-of-type(even) {
+    flex-direction: column !important;
+  }
+
+  .whatwedo-content-block:nth-of-type(2) {
+    flex-direction: column !important;
+  }
+
+  .whatwedo-text-content {
+    flex: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: block;
+    order: 1 !important;
+    padding: 0;
+  }
+  
   .whatwedo-image-content {
-    max-width: 100%;
-    width: 100%;
+    flex: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: 2 !important;
+    padding: 0;
+  }
+  
+  /* 모든 섹션에서 모바일에서는 텍스트가 먼저, 이미지가 나중에 */
+  .whatwedo-content-block:nth-of-type(2) .whatwedo-text-content {
+    order: 1 !important;
+  }
+  
+  .whatwedo-content-block:nth-of-type(2) .whatwedo-image-content {
+    order: 2 !important;
   }
 
   .whatwedo-block-title {
     font-size: 1.8rem;
     text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .whatwedo-block-text {
     text-align: center;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .whatwedo-block-text p {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: block;
+    padding: 0;
   }
 
   .whatwedo-circle-image {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 300px;
+    margin: 0 auto;
   }
 
   .whatwedo-circle-image i {
@@ -212,8 +287,180 @@
   }
 
   .whatwedo-options-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .whatwedo-option-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* 모바일에서 버튼을 텍스트 컨텐츠 밖으로 빼서 이미지 아래에 배치 */
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-text-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-wrapper {
+    order: 10 !important;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+  }
+  
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-image-content {
+    order: 2 !important;
+  }
+  
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin: 20px auto 0;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatwedo-section {
+    padding: 60px 0;
+  }
+
+  .whatwedo-content-block {
+    gap: 25px;
+    margin-bottom: 50px;
+    align-items: stretch;
+    width: 100%;
+    flex-direction: column !important;
+    display: flex;
+  }
+
+  .whatwedo-content-block:nth-of-type(even) {
+    flex-direction: column !important;
+  }
+
+  .whatwedo-content-block:nth-of-type(2) {
+    flex-direction: column !important;
+  }
+
+  .whatwedo-text-content {
+    flex: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 15px;
+    display: block;
+    order: 1 !important;
+  }
+  
+  .whatwedo-image-content {
+    order: 2 !important;
+  }
+  
+  /* 모든 섹션에서 모바일에서는 텍스트가 먼저, 이미지가 나중에 */
+  .whatwedo-content-block:nth-of-type(2) .whatwedo-text-content {
+    order: 1 !important;
+  }
+  
+  .whatwedo-content-block:nth-of-type(2) .whatwedo-image-content {
+    order: 2 !important;
+  }
+  
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-text-content {
+    order: 1 !important;
+  }
+  
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-image-content {
+    order: 2 !important;
+  }
+
+  .whatwedo-block-title {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .whatwedo-block-text {
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+
+  .whatwedo-block-text p {
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    width: 100%;
+    display: block;
+  }
+
+  .whatwedo-image-content {
+    flex: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  .whatwedo-circle-image {
+    width: 100%;
+    max-width: 250px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .whatwedo-circle-image i {
+    font-size: 3rem;
+  }
+
+  .whatwedo-options-grid {
+    width: 100%;
+    gap: 15px;
+    grid-template-columns: 1fr !important;
+  }
+
+  .whatwedo-option-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* 모바일에서 버튼을 텍스트 컨텐츠 밖으로 빼서 이미지 아래에 배치 */
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-text-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-wrapper {
+    order: 10 !important;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+    padding: 0 15px;
+  }
+  
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-image-content {
+    order: 2 !important;
+  }
+  
+  .whatwedo-content-block:nth-of-type(3) .whatwedo-cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+    box-sizing: border-box;
   }
 }
 

@@ -235,13 +235,24 @@
 }
 
 @media (max-width: 480px) {
+  .modern-hero-section {
+    padding: 90px 0 30px;
+  }
+
   .hero-main-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
   }
 
   .hero-sub-title {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
-
-
+  
+  .hero-sub-question {
+    font-size: 1rem;
+  }
+  
+  .hero-headline {
+    margin-bottom: 30px;
+  }
 }

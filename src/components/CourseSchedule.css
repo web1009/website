@@ -533,6 +533,11 @@
   .course-schedule-section .container {
     padding: 0 20px;
   }
+  
+  .timeline-wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 
   .schedule-main-title {
     font-size: 2.2rem;
@@ -601,6 +606,12 @@
 
   .duration-text {
     font-size: 1rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .timeline-duration {
+    white-space: normal;
   }
 
   .schedule-options {
@@ -614,7 +625,7 @@
 
   .schedule-option {
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     padding: 25px 30px;
   }
 
@@ -636,12 +647,20 @@
   }
 
   .timeline-duration {
-    top: -70px;
+    top: -60px;
     padding: 0;
+    white-space: normal;
   }
 
   .duration-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+  
+  .step-label-on-line {
+    white-space: normal;
+    padding: 8px 16px;
+    font-size: 0.8rem;
   }
 
   .marker-label {
@@ -651,8 +670,26 @@
   }
   
   .timeline-wrapper {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .timeline-marker {
+    max-width: 120px;
+  }
+  
+  .marker-label {
+    min-width: 100px;
+    max-width: 120px;
+    padding: 6px 12px;
+  }
+  
+  .marker-label-title {
+    font-size: 0.75rem;
+  }
+  
+  .marker-label-duration {
+    font-size: 0.65rem;
   }
 
   .marker-label-title {
@@ -666,6 +703,18 @@
 
   .schedule-option {
     padding: 20px 25px;
+    min-width: auto;
+  }
+  
+  .option-time {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .schedule-divider {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
   }
 
   .option-time {
