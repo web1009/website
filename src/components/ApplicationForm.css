@@ -1,0 +1,198 @@
+.application-form-section {
+  padding: 100px 0;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.application-form-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 53, 147, 0.02);
+  z-index: 0;
+}
+
+.application-form-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.application-content {
+  text-align: center;
+}
+
+.application-main-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.application-highlight {
+  margin-bottom: 50px;
+}
+
+.application-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #2c3e50;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  box-shadow: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+.application-badge i {
+  font-size: 1.2rem;
+}
+
+.application-subtitle {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Application Button */
+.application-button-wrapper {
+  margin-top: 30px;
+}
+
+.application-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 25px 80px;
+  background: #283593;
+  color: white;
+  text-decoration: none;
+  border-radius: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(40, 53, 147, 0.4);
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.application-submit-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.application-submit-button:hover::before {
+  left: 100%;
+}
+
+.application-submit-button:hover {
+  transform: translateY(-2px);
+  background: #1a237e;
+  box-shadow: 0 6px 16px rgba(40, 53, 147, 0.5);
+  color: white;
+  text-decoration: none;
+}
+
+.button-text {
+  position: relative;
+  z-index: 1;
+}
+
+.application-submit-button i {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.application-submit-button:hover i {
+  transform: translateX(8px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .application-main-title {
+    font-size: 2.8rem;
+  }
+
+  .application-submit-button {
+    padding: 22px 70px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .application-form-section {
+    padding: 60px 0;
+  }
+
+  .application-form-section .container {
+    padding: 0 20px;
+  }
+
+  .application-main-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .application-highlight {
+    margin-bottom: 40px;
+  }
+
+  .application-badge {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .application-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .application-submit-button {
+    padding: 20px 60px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-main-title {
+    font-size: 1.8rem;
+  }
+
+  .application-badge {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .application-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .application-submit-button {
+    padding: 18px 50px;
+    font-size: 1.1rem;
+    gap: 12px;
+  }
+}

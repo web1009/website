@@ -1,0 +1,687 @@
+.benefits-section {
+  padding: 100px 0;
+  background-color: transparent;
+  position: relative;
+}
+
+.benefits-section .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.benefits-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.benefits-label {
+  display: inline-block;
+  color: #283593;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.benefits-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.benefits-content-wrapper {
+  display: flex;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 왼쪽 리스트 */
+.benefits-list {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: transparent;
+  padding: 20px;
+  border-radius: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.benefit-list-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.benefit-list-item:hover {
+  background: transparent;
+}
+
+.benefit-list-item.active {
+  background: #1976d2;
+  color: #ffffff;
+  z-index: 5;
+}
+
+/* 활성 항목의 배경이 오른쪽으로 확장되어 화살표 모양으로 연결 */
+.benefit-list-item.active::after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: 0;
+  bottom: 0;
+  width: calc(40px + 40px);
+  background: #1976d2;
+  clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 50%, calc(100% - 40px) 100%, 0 100%);
+  z-index: 4;
+  transition: all 0.3s ease;
+}
+
+.benefit-list-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #90caf9;
+  min-width: 60px;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.benefit-list-item.active .benefit-list-number {
+  font-size: 3.5rem;
+  color: #ffffff;
+}
+
+.benefit-list-content {
+  flex: 1;
+}
+
+.benefit-list-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+  font-family: 'Raleway', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.benefit-list-item.active .benefit-list-title {
+  color: #ffffff;
+}
+
+.benefit-list-description {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.benefit-list-item.active .benefit-list-description {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.benefit-list-arrow {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+/* 오른쪽 상세 내용 */
+.benefits-detail {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #e3f2fd;
+  border-radius: 8px;
+  padding: 40px;
+  min-height: 600px;
+  animation: fadeIn 0.5s ease;
+  margin-left: 40px;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.benefit-detail-header {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: none;
+}
+
+.benefit-detail-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.benefit-detail-arrow {
+  color: #f44336;
+  font-size: 1.2rem;
+}
+
+.benefit-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Free Course 강조 문구 */
+.benefit-free-highlight {
+  background: #ffffff;
+  padding: 30px 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.benefit-free-text-large {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #25D366;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-zoom-text-large {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.3;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* 강조 문구 박스 */
+.benefit-highlight-box {
+  background: #ffffff;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+.benefit-highlight-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1976d2;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* 이미지 박스 */
+.benefit-image-box {
+  width: 100%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.benefit-image {
+  width: 70%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* 단계 진행 표시 */
+.benefit-level-progress {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 10px 0;
+}
+
+.level-progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  position: relative;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.level-step-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.level-step-button {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  padding: 12px 20px;
+  background: #1976d2;
+  border-radius: 25px;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.level-step-button.level-completion {
+  background: #ff6b35;
+  font-weight: 700;
+}
+
+.level-connector {
+  width: 40px;
+  height: 3px;
+  background: #1976d2;
+  position: relative;
+  margin: 0 5px;
+  flex-shrink: 0;
+}
+
+.level-connector::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid #1976d2;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+/* 시간표 옵션 */
+.benefit-schedule-options {
+  width: 100%;
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+
+.benefit-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.benefit-option-card {
+  background-color: #f8f9fa;
+  border-radius: 0;
+  padding: 30px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.benefit-option-card:hover {
+  border-color: #283593;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 53, 147, 0.15);
+}
+
+.benefit-option-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.benefit-option-details {
+  text-align: left;
+}
+
+.benefit-option-details p {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.benefit-option-details i {
+  color: #283593;
+  width: 20px;
+}
+
+/* 설명 박스 */
+.benefit-description-box {
+  background: #ffffff;
+  padding: 10px 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.benefit-description-text {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  line-height: 1.6;
+  margin: 0 0 5px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.benefit-description-text:last-child {
+  margin-bottom: 0;
+}
+
+/* 차트 컨테이너 */
+.benefit-charts-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* 원형 게이지 */
+.benefit-gauge-container {
+  flex: 0 0 200px;
+}
+
+.benefit-gauge {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gauge-background {
+  stroke: #e0e0e0;
+}
+
+.gauge-fill {
+  stroke: #2196F3;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.8s ease;
+}
+
+.gauge-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gauge-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.gauge-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7f8c8d;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* 막대 그래프 */
+.benefit-bar-chart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bar-chart-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.bar-chart-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar-chart-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-family: 'Raleway', sans-serif;
+}
+
+.bar-chart-sublabel {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  font-family: 'Raleway', sans-serif;
+}
+
+.bar-chart-bar-wrapper {
+  width: 100%;
+  height: 35px;
+  background: #f0f0f0;
+  border-radius: 0;
+  overflow: visible;
+  position: relative;
+}
+
+.bar-chart-bar {
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+.bar-chart-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  top: -25px;
+  right: 0;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .benefits-title {
+    font-size: 2.5rem;
+  }
+
+  .benefits-content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .benefits-list {
+    flex: 1;
+    width: 100%;
+  }
+
+  .benefits-detail {
+    min-height: auto;
+  }
+
+  .benefit-charts-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .benefit-gauge-container {
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 60px 0;
+  }
+
+  .benefits-section .container {
+    padding: 0 20px;
+  }
+
+  .benefit-options-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .benefit-option-card {
+    padding: 20px;
+  }
+
+  .benefit-free-text-large {
+    font-size: 2.5rem;
+  }
+
+  .benefit-zoom-text-large {
+    font-size: 1.8rem;
+  }
+
+  .benefits-header {
+    margin-bottom: 40px;
+  }
+
+  .benefits-title {
+    font-size: 2rem;
+  }
+
+  .benefits-content-wrapper {
+    gap: 25px;
+  }
+
+  .benefit-list-item {
+    padding: 15px;
+  }
+
+  .benefit-list-number {
+    font-size: 1.5rem;
+    min-width: 35px;
+  }
+
+  .benefit-list-item.active .benefit-list-number {
+    font-size: 1.8rem;
+  }
+
+  .benefit-list-title {
+    font-size: 1.1rem;
+  }
+
+  .benefit-list-description {
+    font-size: 0.9rem;
+  }
+
+  .benefits-detail {
+    padding: 30px 20px;
+  }
+
+  .benefit-detail-title {
+    font-size: 1.5rem;
+  }
+
+  .benefit-gauge {
+    width: 150px;
+    height: 150px;
+  }
+
+  .gauge-value {
+    font-size: 2rem;
+  }
+
+  .gauge-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-title {
+    font-size: 1.8rem;
+  }
+
+  .benefits-list {
+    padding: 20px 15px;
+  }
+
+  .benefit-list-item {
+    padding: 12px;
+    gap: 15px;
+  }
+
+  .benefits-detail {
+    padding: 25px 15px;
+  }
+
+  .benefit-gauge {
+    width: 120px;
+    height: 120px;
+  }
+
+  .gauge-value {
+    font-size: 1.5rem;
+  }
+
+  .bar-chart-bar-wrapper {
+    height: 30px;
+  }
+
+  .benefit-free-text-large {
+    font-size: 2rem;
+  }
+
+  .benefit-zoom-text-large {
+    font-size: 1.5rem;
+  }
+
+  .benefit-free-highlight {
+    padding: 20px 0;
+  }
+}

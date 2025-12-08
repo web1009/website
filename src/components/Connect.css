@@ -1,0 +1,320 @@
+.connect-section {
+  padding: 100px 0;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.connect-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(40, 53, 147, 0.02);
+  z-index: 0;
+}
+
+.connect-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.connect-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.connect-label {
+  display: inline-block;
+  color: #283593;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.connect-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Social Links Grid */
+.connect-grid-social {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
+}
+
+/* Grid */
+.connect-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.connect-card {
+  background: white;
+  border-radius: 0;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+}
+
+.connect-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: #283593;
+}
+
+.connect-card-gradient {
+  background: #283593;
+  color: white;
+}
+
+.connect-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.connect-card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.connect-card-title-white {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.connect-card-description {
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.connect-card-description-white {
+  font-size: 1rem;
+  color: rgba(43, 43, 43, 0.9);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Members/Avatars */
+.connect-members {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.member-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 0;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f1f8e9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #283593;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-avatar i {
+  color: #283593;
+}
+
+.member-count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #283593;
+}
+
+/* Social Link Wrapper */
+.connect-link-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.connect-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background: #283593;
+  color: white;
+  text-decoration: none;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(40, 53, 147, 0.3);
+  font-family: 'Raleway', sans-serif;
+}
+
+.connect-social-link:hover {
+  transform: translateY(-1px);
+  background: #1a237e;
+  box-shadow: 0 4px 12px rgba(40, 53, 147, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.connect-social-link i {
+  font-size: 1.3rem;
+}
+
+/* 브랜드 아이콘 스타일 */
+.connect-icon-large-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.connect-icon-brand {
+  font-size: 4rem;
+  display: inline-block;
+}
+
+.connect-icon-whatsapp {
+  color: #25D366;
+}
+
+.connect-icon-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 브랜드 색상 버튼 */
+.connect-social-link-whatsapp {
+  background: #25D366;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+.connect-social-link-whatsapp:hover {
+  background: #20ba5a;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.connect-social-link-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  box-shadow: 0 2px 8px rgba(220, 39, 67, 0.3);
+}
+
+.connect-social-link-instagram:hover {
+  background: linear-gradient(45deg, #e0852e 0%, #d55d31 25%, #c9223a 50%, #b91f5a 75%, #a8157a 100%);
+  box-shadow: 0 4px 12px rgba(220, 39, 67, 0.4);
+}
+
+/* Gradient Card Special Elements */
+.connect-icon-large {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.2);
+  z-index: 0;
+}
+
+.connect-card-gradient .connect-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .connect-grid-social {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .connect-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .connect-section {
+    padding: 60px 0;
+  }
+
+  .connect-header {
+    margin-bottom: 40px;
+  }
+
+  .connect-title {
+    font-size: 2rem;
+  }
+
+  .connect-grid-social {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .connect-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .connect-card {
+    padding: 30px;
+  }
+
+  .connect-card-title,
+  .connect-card-title-white {
+    font-size: 1.5rem;
+  }
+
+  .connect-icon-large {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .connect-title {
+    font-size: 1.8rem;
+  }
+
+  .connect-card {
+    padding: 25px;
+  }
+
+  .member-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
